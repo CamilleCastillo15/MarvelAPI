@@ -1,0 +1,7 @@
+marvel:
+    resource: "@MarvelBundle/Resources/config/routing.yml"
+    prefix:   /marvel
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
