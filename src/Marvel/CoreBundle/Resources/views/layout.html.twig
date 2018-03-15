@@ -1,0 +1,48 @@
+{# src/MarvelBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Exercice Marvel API{% endblock %}</title>
+
+    {% block stylesheets %}
+      {% stylesheets '@MarvelCoreBundle/Resources/assets/css/*' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+      {% endstylesheets %}
+    {% endblock %}
+    
+  </head>
+  <body>
+    <div class="container">
+
+        {% block body %}
+
+            <div class="header" >
+
+            </div>
+
+            <hr>
+
+            <div class="body" >
+
+            </div>
+
+        {% endblock %}
+
+        {% block footer %}
+
+            <hr>
+
+            <footer>
+            </footer>
+
+            <hr>
+
+        {% endblock %}
+
+    </div>
+  </body>
+</html>

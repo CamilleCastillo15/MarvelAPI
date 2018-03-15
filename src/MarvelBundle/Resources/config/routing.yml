@@ -1,3 +1,0 @@
-marvel_homepage:
-    path:     /
-    defaults: { _controller: MarvelBundle:Default:index }

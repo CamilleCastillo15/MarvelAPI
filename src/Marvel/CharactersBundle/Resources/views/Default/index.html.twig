@@ -1,0 +1,18 @@
+{# On utilise ici le layout général, qui se situe dans ce même CoreBundle maintenant #}
+{% extends "MarvelCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Vue globale
+{% endblock %}
+
+{% block body %} 
+    
+  {{ parent() }}
+  
+{% endblock %}
+
+{% block footer %}
+    
+    {{ parent() }}
+    
+{% endblock %}

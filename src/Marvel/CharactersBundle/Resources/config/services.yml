@@ -1,0 +1,4 @@
+services:
+#    marvel_characters.example:
+#        class: Marvel\CharactersBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

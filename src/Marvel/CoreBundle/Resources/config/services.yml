@@ -1,0 +1,4 @@
+services:
+#    marvel_core.example:
+#        class: Marvel\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

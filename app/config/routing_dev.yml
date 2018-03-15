@@ -13,7 +13,11 @@ _errors:
 _main:
     resource: routing.yml
 
-marvel:
-    resource: "@MarvelBundle/Resources/config/routing.yml"
-    defaults:  { _controller: MarvelBundle:Default:index }
-    prefix:   /marvel
+marvel_core:
+    resource: "@MarvelCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+marvel_characters:
+    resource: "@MarvelCharactersBundle/Resources/config/routing.yml"
+    prefix:   /characters
+   

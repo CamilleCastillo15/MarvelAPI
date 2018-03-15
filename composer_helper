@@ -1,0 +1,7 @@
+
+"psr-4": {
+            "MarvelBundle\\": "src/MarvelBundle",
+            "CoreBundle\\": "src/CoreBundle",
+            "Marvel\\CharactersBundle\\": "src/Marvel/CharactersBundle",
+            "Marvel\\CoreBundle\\": "src/Marvel/CoreBundle"
+        },

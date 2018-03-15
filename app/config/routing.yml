@@ -1,7 +1,9 @@
-marvel:
-    resource: "@MarvelBundle/Resources/config/routing.yml"
-    prefix:   /marvel
+marvel_core:
+    resource: "@MarvelCoreBundle/Resources/config/routing.yml"
+    prefix:   /
 
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+marvel_characters:
+    resource: "@MarvelCharactersBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

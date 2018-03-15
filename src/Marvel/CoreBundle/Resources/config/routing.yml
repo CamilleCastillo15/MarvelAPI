@@ -1,0 +1,3 @@
+marvel_core_homepage:
+    path:     /
+    defaults: { _controller: MarvelCoreBundle:Default:index }

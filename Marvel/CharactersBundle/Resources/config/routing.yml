@@ -1,0 +1,3 @@
+characters_homepage:
+    path:     /
+    defaults: { _controller: CharactersBundle:Default:index }
