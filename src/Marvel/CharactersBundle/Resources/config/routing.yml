@@ -1,3 +1,7 @@
 marvel_characters_homepage:
     path:     /
     defaults: { _controller: MarvelCharactersBundle:Default:index }
+    
+marvel_characters_detail:
+    path:     /{id}
+    defaults: { _controller: MarvelCharactersBundle:Default:detail }  

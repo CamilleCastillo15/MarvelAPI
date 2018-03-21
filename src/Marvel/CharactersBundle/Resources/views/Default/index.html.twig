@@ -8,7 +8,7 @@
 {% block body %} 
     
   {{ parent() }}
-  <table>
+  <table id="myTable">
       <thead>
         <th>Nom du personnage</th>
         <th>Image</th>
@@ -16,11 +16,34 @@
       <tbody>
           {% for character in result %}
               <tr>
-                  <td> {{ character.name }} </td>
+          <td> <a href="{{ path('marvel_characters_detail', {'id': character.id}) }}" >{{ character.name }} </a></td>
                   <td> <img src="{{ character.thumbnail }}" alt="{{ character.name }}" /></td>
               </tr>    
           {% endfor %}    
-      </tbody>    
+      </tbody>  
+      <tfoot>
+            <tr>
+                <th colspan="2" id="pager_tab_inscriptions" class="form-horizontal">
+                    <button type="button" class="btn first">
+                        <i class="icon-step-backward glyphicon glyphicon-step-backward"></i>
+                    </button>
+                    <button type="button" class="btn prev">
+                        <i class="icon-arrow-left glyphicon glyphicon-backward"></i>
+                    </button>
+                    <span class="pagedisplay"></span>
+                    <button type="button" class="btn next">
+                        <i class="icon-arrow-right glyphicon glyphicon-forward"></i>
+                    </button>
+                    <button type="button" class="btn last">
+                        <i class="icon-step-forward glyphicon glyphicon-step-forward"></i>
+                    </button>
+                    <select class="pagesize input-sm" title="Nombre de lignes">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </th>
+            </tr>
+            </tfoot>
   </table>    
   
 {% endblock %}

@@ -69,7 +69,8 @@ swiftmailer:
     
 assetic:
     debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
+    use_controller: false
+    bundles: [ MarvelCharactersBundle, MarvelCoreBundle ]
     assets:
         glyphicons-halflings-regular-otf:
           inputs: '%kernel.root_dir%/Resources/fonts/FontAwesome.otf'

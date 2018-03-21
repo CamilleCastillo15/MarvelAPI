@@ -1,0 +1,279 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17 sept. 2014, 10:51:57
+    Author     : i71149
+*/
+
+.rotationZ {
+    -webkit-animation: rotationZ 1s ease;
+    -moz-animation: rotationZ 1s ease;
+    -ms-animation: rotationZ 1s ease;
+    -o-animation: rotationZ 1s ease;
+    animation: rotationZ 1s ease;
+}
+@-webkit-keyframes rotationZ {
+    from { -webkit-transform: rotateZ(0deg); }
+    to { -webkit-transform: rotateZ(360deg); }
+}
+@-moz-keyframes rotationZ {
+    from { -moz-transform: rotateZ(0deg); }
+    to { -moz-transform: rotateZ(360deg); }
+}
+@-ms-keyframes rotationZ {
+    from { -ms-transform: rotateZ(0deg); }
+    to { -ms-transform: rotateZ(360deg); }
+}
+@-o-keyframes rotationZ {
+    from { -o-transform: rotateZ(0deg); }
+    to { -o-transform: rotateZ(360deg); }
+}
+@keyframes rotationZ {
+    from { transform: rotateZ(0deg); }
+    to { transform: rotateZ(360deg); }
+}
+
+.rotationY {
+    -webkit-animation: rotationY 1s ease;
+    -moz-animation: rotationY 1s ease;
+    -ms-animation: rotationY 1s ease;
+    -o-animation: rotationY 1s ease;
+    animation: rotationY 1s ease;
+}
+@-webkit-keyframes rotationY {
+    from { -webkit-transform: rotateY(0deg); }
+    to { -webkit-transform: rotateY(360deg); }
+}
+@-moz-keyframes rotationY {
+    from { -moz-transform: rotateY(0deg); }
+    to { -moz-transform: rotateY(360deg); }
+}
+@-ms-keyframes rotationY {
+    from { -ms-transform: rotateY(0deg); }
+    to { -ms-transform: rotateY(360deg); }
+}
+@-o-keyframes rotationY {
+    from { -o-transform: rotateY(0deg); }
+    to { -o-transform: rotateY(360deg); }
+}
+@keyframes rotationY {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.rotationX {
+    -webkit-animation: rotationX 1s ease;
+    -moz-animation: rotationX 1s ease;
+    -ms-animation: rotationX 1s ease;
+    -o-animation: rotationX 1s ease;
+    animation: rotationX 1s ease;
+}
+@-webkit-keyframes rotationX {
+    from { -webkit-transform: rotateX(0deg); }
+    to { -webkit-transform: rotateX(360deg); }
+}
+@-moz-keyframes rotationX {
+    from { -moz-transform: rotateX(0deg); }
+    to { -moz-transform: rotateX(360deg); }
+}
+@-ms-keyframes rotationX {
+    from { -ms-transform: rotateX(0deg); }
+    to { -ms-transform: rotateX(360deg); }
+}
+@-o-keyframes rotationX {
+    from { -o-transform: rotateX(0deg); }
+    to { -o-transform: rotateX(360deg); }
+}
+@keyframes rotationX {
+    from { transform: rotateX(0deg); }
+    to { transform: rotateX(360deg); }
+}
+
+.zoom_in {
+    -webkit-animation: zoom_in 0.3s ease;
+    -moz-animation: zoom_in 0.3s ease;
+    -ms-animation: zoom_in 0.3s ease;
+    -o-animation: zoom_in 0.3s ease;
+    animation: zoom_in 0.2s ease;
+}
+
+@-webkit-keyframes zoom_in {
+    from { -webkit-transform: scale(1.3); }
+    to { -webkit-transform: scale(1); }
+}
+@-moz-keyframes zoom_in {
+    from { -moz-transform: scale(1.3); }
+    to { -moz-transform: scale(1); }
+}
+@-ms-keyframes zoom_in {
+    from { -ms-transform: scale(1.3); }
+    to { -ms-transform: scale(1); }
+}
+@-o-keyframes zoom_in {
+    from { -o-transform: scale(1.3); }
+    to { -o-transform: scale(1); }
+}
+@keyframes zoom_in {
+    from { transform: scale(1.3); }
+    to { transform: scale(1); }
+}
+
+.zoom_out {
+    -webkit-animation: zoom_out 0.3s ease;
+    -moz-animation: zoom_out 0.3s ease;
+    -ms-animation: zoom_out 0.3s ease;
+    -o-animation: zoom_out 0.3s ease;
+    animation: zoom_out 0.3s ease;
+}
+
+@-webkit-keyframes zoom_out {
+    from { -webkit-transform: scale(0.7); }
+    to { -webkit-transform: scale(1); }
+}
+@-moz-keyframes zoom_out {
+    from { -moz-transform: scale(0.7); }
+    to { -moz-transform: scale(1); }
+}
+@-ms-keyframes zoom_out {
+    from { -ms-transform: scale(0.7); }
+    to { -ms-transform: scale(1); }
+}
+@-o-keyframes zoom_out {
+    from { -o-transform: scale(0.7); }
+    to { -o-transform: scale(1); }
+}
+@keyframes zoom_out {
+    from { transform: scale(0.7); }
+    to { transform: scale(1); }
+}
+
+.translateX_right {
+    -webkit-animation: translateX_right 0.5s ease;
+    -moz-animation: translateX_right 0.5s ease;
+    -ms-animation: translateX_right 0.5s ease;
+    -o-animation: translateX_right 0.5s ease;
+    animation: translateX_right 0.5s ease;
+}
+
+@-webkit-keyframes translateX_right {
+    from { -webkit-transform: translateX(150%); }
+}
+@-moz-keyframes translateX_right {
+    from { -moz-transform: translateX(150%); }
+}
+@-ms-keyframes translateX_right {
+    from { -ms-transform: translateX(150%); }
+}
+@-o-keyframes translateX_right {
+    from { -o-transform: translateX(150%); }
+}
+@keyframes translateX_right {
+    from { transform: translateX(150%); }
+}
+
+.translateX_left {
+    -webkit-animation: translateX_left 0.5s ease;
+    -moz-animation: translateX_left 0.5s ease;
+    -ms-animation: translateX_left 0.5s ease;
+    -o-animation: translateX_left 0.5s ease;
+    animation: translateX_left 0.5s ease;
+}
+
+@-webkit-keyframes translateX_left {
+    from { -webkit-transform: translateX(-150%); }
+}
+@-moz-keyframes translateX_left {
+    from { -moz-transform: translateX(-150%); }
+}
+@-ms-keyframes translateX_left {
+    from { -ms-transform: translateX(-150%); }
+}
+@-o-keyframes translateX_left {
+    from { -o-transform: translateX(-150%); }
+}
+@keyframes translateX_left {
+    from { transform: translateX(-150%); }
+}
+
+.moveFromTop {
+    -webkit-animation: moveFromTop 1s ease;
+    -moz-animation: moveFromTop 1s ease;
+    -ms-animation: moveFromTop 1s ease;
+    -o-animation: moveFromTop 1s ease;
+    animation: moveFromTop 0.5s ease;
+}
+@-webkit-keyframes moveFromTop {
+    from { -webkit-transform: translateY(-200%); }
+}
+@-moz-keyframes moveFromTop {
+    from { -moz-transform: translateY(-200%); }
+}
+@-ms-keyframes moveFromTop {
+    from { -ms-transform: translateY(-200%); }
+}
+@-o-keyframes moveFromTop {
+    from { -o-transform: translateY(-200%); }
+}
+@keyframes moveFromTop {
+    from { transform: translateY(-100%); }
+}
+
+.moveFromLeft {
+    -webkit-animation: moveFromLeft .3s ease;
+    animation: moveFromLeft .3s ease;
+}
+@-webkit-keyframes moveFromLeft {
+    from { -webkit-transform: translateX(-20%); }
+}
+@keyframes moveFromLeft {
+    from { transform: translateX(-20%); }
+}
+
+.moveFromRight {
+	-webkit-animation: moveFromRight .3s ease;
+	animation: moveFromRight .3s ease;
+}
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
+
+.moveToRight {
+	-webkit-animation: moveToRight .5s ease;
+	animation: moveToRight .5s ease;
+}
+@-webkit-keyframes moveToRight { 
+	from {  }
+	to { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveToRight {
+    from {  }
+    to { -moz-transform: translateX(100%); }
+}
+@keyframes moveToRight { 
+	from {  }
+	to { transform: translateX(100%); }
+}
+
+
+.moveToTop {
+    -webkit-animation: moveToTop .5s ease;
+    animation: moveToTop .5s ease;
+}
+@-webkit-keyframes moveToTop {
+    from {  }
+    to { -webkit-transform: translateY(-200%); }
+}
+@-moz-keyframes moveToTop {
+    from {  }
+    to { -moz-transform: translateY(-200%); }
+}
+@keyframes moveToTop {
+    from {  }
+    to { transform: translateY(-200%); }
+}

@@ -6,8 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
-    {
+    public function getResultsUrl($id = null){
+        
         $apiKeyPublic = "b4ff43fef8c49cd2d6393821ef4b82a5";
         $apiKeyPrivate = "8db77b1f10ec23835d6465b818d3f47c579552a0";
         $ts = time();
@@ -18,10 +18,16 @@ class DefaultController extends Controller
         //(e.g. md5(ts+privateKey+publicKey)
         $concat = (string)$ts.$apiKeyPrivate.$apiKeyPublic;
         $hash = md5($concat);
-        $offset = 100;
-        $limit = 20;
         
-        $url = "http://gateway.marvel.com/v1/public/characters?ts=".$ts."&apikey=".$apiKeyPublic."&hash=".$hash."&limit=".$limit."&offset=".$offset;
+        if($id != null){
+            $concatUrl = "&id=".$id;
+        }else{
+            $limit = 20;
+            $offset = 100;
+            $concatUrl = "&limit=".$limit."&offset=".$offset;
+        }
+        
+        $url = "http://gateway.marvel.com/v1/public/characters?ts=".$ts."&apikey=".$apiKeyPublic."&hash=".$hash.$concatUrl;
         
         $ch = curl_init();
         // configuration des options
@@ -42,25 +48,65 @@ class DefaultController extends Controller
         //$result = preg_replace('!s:(\d+):"(.*?)";!e', "'s:'.strlen('$2').':\"$2\";'", $result);
         //unserialize($result);
         $result = json_decode($result, true);
-        $result_display = array();
+        return $result;
         
+    }
+    
+    public function indexAction()
+    {
+        $result = $this->getResultsUrl();
+        $result_display = array();
         foreach($result['data']['results'] as $i => $character){
             
+            $result_display[$i]['id'] = $character['id'];
             $result_display[$i]['name'] = $character['name'];
             $path = $character['thumbnail']['path'];
-            dump($path);
             $path_uri = $path.'.jpg';
             
             $result_display[$i]['thumbnail'] = $path_uri;
             
         }
         
-        //dump($result_display); exit();
-        //var_dump($concat, $ch, $result); exit();
-        //exit();
+        
+        //dump($result); exit();
         
         return $this->render('MarvelCharactersBundle:Default:index.html.twig', array(
             "result" => $result_display
         ));
+    }
+    
+    public function detailAction($id)
+    {
+        //Dans le détail :
+        // name / description / image / 
+        // le nombre de comics où le personnage apparait / 
+        // les titres des 3 premiers comics où le personnage apparait
+        
+        $result = $this->getResultsUrl($id);
+        $result_display = array();
+        foreach($result['data']['results'] as $i => $character){
+            
+            $result_display['id'] = $character['id'];
+            $result_display['name'] = $character['name'];
+            $result_display['desc'] = $character['description'];
+            
+            $path = $character['thumbnail']['path'];
+            $path_uri = $path.'.jpg';
+            
+            $result_display['thumbnail'] = $path_uri;
+            
+            $result_display['nb_comics'] = $character['comics']['returned'];
+            
+            $result_display['comics'] = array();
+            for($i=0;$i<3;$i++){
+                $result_display['comics'][$i] = $character['comics']['items'][$i]['name'];
+            }
+            
+        }
+        
+        return $this->render('MarvelCharactersBundle:Default:detail.html.twig', array(
+            "result" => $result_display
+        ));
+        
     }
 }

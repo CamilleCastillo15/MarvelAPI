@@ -35,6 +35,21 @@
             </footer>
 
             <hr>
+            
+            {% block javascripts %}
+                {% javascripts '@MarvelCoreBundle/Resources/assets/js/lib/jquery-3.2.1.min.js'
+                               '@MarvelCoreBundle/Resources/assets/js/lib/bootstrap.js'
+                               '@MarvelCoreBundle/Resources/assets/js/lib/jquery.tablesorter.min.js'
+                               '@MarvelCoreBundle/Resources/assets/js/lib/jquery.tablesorter.pager.min.js'
+                               '@MarvelCoreBundle/Resources/assets/js/lib/widget-filter.js'
+                               '@MarvelCoreBundle/Resources/assets/js/lib/widget-uitheme.js'
+                               '@MarvelCoreBundle/Resources/assets/js/lib/bootstrap-select.min.js'
+
+                               '@MarvelCoreBundle/Resources/assets/js/lib/*'
+                               '@MarvelCoreBundle/Resources/assets/js/scripts/*' %}
+                     <script src='{{ asset_url }}' type='text/javascript'></script>
+                {% endjavascripts %}
+            {% endblock %}  
 
         {% endblock %}
 
