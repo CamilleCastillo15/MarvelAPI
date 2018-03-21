@@ -8,6 +8,20 @@
 {% block body %} 
     
   {{ parent() }}
+  <table>
+      <thead>
+        <th>Nom du personnage</th>
+        <th>Image</th>
+      </thead>
+      <tbody>
+          {% for character in result %}
+              <tr>
+                  <td> {{ character.name }} </td>
+                  <td> <img src="{{ character.thumbnail }}" alt="{{ character.name }}" /></td>
+              </tr>    
+          {% endfor %}    
+      </tbody>    
+  </table>    
   
 {% endblock %}
 

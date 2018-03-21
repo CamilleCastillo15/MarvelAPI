@@ -3,8 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/src/MarvelBundle/Controller/DefaultController.php</file>
-            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/composer.json</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/web/css/cc5db19.css</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/app/config/parameters.yml</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/src/Marvel/CharactersBundle/Resources/views/Default/index.html.twig</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/web/css/cc5db19_part_1_style_1.css</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/src/Marvel/CoreBundle/Resources/assets/css/style.css</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/src/Marvel/CoreBundle/Resources/views/layout.html.twig</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/app/config/routing.yml</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/app/AppKernel.php</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/app/config/config.yml</file>
+            <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/app/config/routing_dev.yml</file>
             <file>file:/Applications/MAMP/htdocs/symfony_test_folders/test_marvel_api/app/config/config_dev.yml</file>
         </group>
     </open-files>
