@@ -12,3 +12,42 @@ img {
     width: 100px;
     height: 100px;
 }
+
+#eventlist {
+    background-color: white;
+    padding: 5px 41px;
+    border-radius: 0px 26px 0px 26px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    /*margin-top: 57px;*/
+    /*margin-top: 17px;*/
+}
+
+#panneau_animation {
+    display: none;
+    width: 100%;
+    min-height: 350px;
+    position: absolute;
+    z-index: 1111;
+
+    background-color: #f9f9f9;
+
+    border-radius: 0px 26px 0px 26px;
+    border-top: 1px solid black;
+    /* border-left: 4px solid #009AC4; */
+
+    padding: 5px 41px;
+    /*padding: 10px 20px 20px;*/
+}
+
+#panneau_animation .fa-view {
+    text-align: left;
+    display: block;
+}
+
+.tablesorter-bootstrap thead th, 
+.tablesorter-bootstrap thead td, 
+.tablesorter-bootstrap tfoot th, 
+.tablesorter-bootstrap tfoot td {
+    background-color: white;
+}

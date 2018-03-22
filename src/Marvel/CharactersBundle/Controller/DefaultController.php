@@ -28,7 +28,7 @@ class DefaultController extends Controller
         }
         
         $url = "http://gateway.marvel.com/v1/public/characters?ts=".$ts."&apikey=".$apiKeyPublic."&hash=".$hash.$concatUrl;
-        
+
         $ch = curl_init();
         // configuration des options
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -89,6 +89,7 @@ class DefaultController extends Controller
         
         $result = $this->getResultsUrl($id);
         $result_display = array();
+        
         foreach($result['data']['results'] as $i => $character){
             
             $result_display['id'] = $character['id'];

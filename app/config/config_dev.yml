@@ -10,7 +10,7 @@ framework:
         enabled: true
 
 web_profiler:
-    toolbar: true
+    toolbar: false
     intercept_redirects: false
 
 monolog:

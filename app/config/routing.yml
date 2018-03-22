@@ -1,9 +1,9 @@
 marvel_core:
     resource: "@MarvelCoreBundle/Resources/config/routing.yml"
     prefix:   /
-
+    
 marvel_characters:
     resource: "@MarvelCharactersBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /characters    
 
 
