@@ -50,5 +50,19 @@ $(window).on('load', function () {
             size: 5,
             fixedHeight: false
         })
+        
+        var filtersCharacter = "";
+        var filters = $.tablesorter.getFilters( $('#myTable') );
+
+        if(filters[1] != ""){filtersCharacter = filters[1]; var arrayFilters = filters[1].split('|');
+            arrayFilters.forEach(function(e){
+                $('#selectToSearchCharacter option[value="' + e +'"]').prop('selected', true);
+            });
+        }
+        
+        $('#selectToSearchCharacter').on('change', function(){
+            if($(this).val() != null){filtersCharacter = $(this).val().join("|"); } else { filtersCharacter = ""; }
+            $('#myTable').trigger('search',[['', filtersCharacter ]]);
+        });
 });
 

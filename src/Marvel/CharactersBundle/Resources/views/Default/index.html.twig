@@ -8,43 +8,67 @@
 {% block body %} 
     
   {{ parent() }}
-  <table id="myTable">
-      <thead>
-        <th>Nom du personnage</th>
-        <th>Image</th>
-      </thead>
-      <tbody>
-          {% for character in result %}
+  
+  <div class="form-group btn-recla-index">
+    <select class="form-control selectpicker"
+            id="selectToSearchCharacter"
+            data-width="fit"
+            title="All characters"
+            multiple>
+        {% for perso in result_persos %}
+            <option value="{{ perso }}">
+            {{ perso }}
+            </option>
+        {% endfor %}
+    </select>
+  </div>  
+  <div id="eventlist">
+    <div class="col-lg-offset-6 col-md-offset-6 col-sm-offset-6 col-xs-offset-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div id="panneau_animation" class="pull-right">
+          <span id="btn_close" style="cursor: pointer;">&times;</span>
+          <div id="contenu_panneau_animation">
+
+          </div>
+      </div>
+    </div>
+    <table id="myTable">
+        <thead>
+          <th><h3>Character name</h3></th>
+          <th><h3>Image</h3></th>
+        </thead>
+        <tbody>
+            {% for character in result %}
+                <tr>
+            <td> <a class="lien_animation" href="{{ path('marvel_characters_detail', {'id': character.id}) }}" >{{ character.name }} </a></td>
+                    <td> <img src="{{ character.thumbnail }}" alt="{{ character.name }}" /></td>
+                </tr>    
+            {% endfor %}    
+        </tbody>  
+        <tfoot>
               <tr>
-          <td> <a href="{{ path('marvel_characters_detail', {'id': character.id}) }}" >{{ character.name }} </a></td>
-                  <td> <img src="{{ character.thumbnail }}" alt="{{ character.name }}" /></td>
-              </tr>    
-          {% endfor %}    
-      </tbody>  
-      <tfoot>
-            <tr>
-                <th colspan="2" id="pager_tab_inscriptions" class="form-horizontal">
-                    <button type="button" class="btn first">
-                        <i class="icon-step-backward glyphicon glyphicon-step-backward"></i>
-                    </button>
-                    <button type="button" class="btn prev">
-                        <i class="icon-arrow-left glyphicon glyphicon-backward"></i>
-                    </button>
-                    <span class="pagedisplay"></span>
-                    <button type="button" class="btn next">
-                        <i class="icon-arrow-right glyphicon glyphicon-forward"></i>
-                    </button>
-                    <button type="button" class="btn last">
-                        <i class="icon-step-forward glyphicon glyphicon-step-forward"></i>
-                    </button>
-                    <select class="pagesize input-sm" title="Nombre de lignes">
-                        <option value="10">10</option>
-                        <option value="20">20</option>
-                    </select>
-                </th>
-            </tr>
-            </tfoot>
-  </table>    
+                  <th colspan="2" id="pager_tab_inscriptions" class="form-horizontal">
+                      <button type="button" class="btn first">
+                          <i class="icon-step-backward glyphicon glyphicon-step-backward"></i>
+                      </button>
+                      <button type="button" class="btn prev">
+                          <i class="icon-arrow-left glyphicon glyphicon-backward"></i>
+                      </button>
+                      <span class="pagedisplay"></span>
+                      <button type="button" class="btn next">
+                          <i class="icon-arrow-right glyphicon glyphicon-forward"></i>
+                      </button>
+                      <button type="button" class="btn last">
+                          <i class="icon-step-forward glyphicon glyphicon-step-forward"></i>
+                      </button>
+                      <select class="pagesize input-sm" title="Nombre de lignes">
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                      </select>
+                  </th>
+              </tr>
+              </tfoot>
+    </table> 
+  </div>        
   
 {% endblock %}
 

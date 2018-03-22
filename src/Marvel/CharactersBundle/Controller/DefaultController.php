@@ -56,6 +56,8 @@ class DefaultController extends Controller
     {
         $result = $this->getResultsUrl();
         $result_display = array();
+        $result_persos = array();
+        
         foreach($result['data']['results'] as $i => $character){
             
             $result_display[$i]['id'] = $character['id'];
@@ -65,13 +67,16 @@ class DefaultController extends Controller
             
             $result_display[$i]['thumbnail'] = $path_uri;
             
+            $result_persos[$i] = $character['name'];
+            
         }
         
         
         //dump($result); exit();
         
         return $this->render('MarvelCharactersBundle:Default:index.html.twig', array(
-            "result" => $result_display
+            "result" => $result_display,
+            "result_persos" => $result_persos
         ));
     }
     
