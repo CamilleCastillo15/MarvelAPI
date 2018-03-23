@@ -62,21 +62,25 @@ class DefaultController extends Controller
             
             $result_display[$i]['id'] = $character['id'];
             $result_display[$i]['name'] = $character['name'];
+            
+            // On récupère l'URL de la vignette
             $path = $character['thumbnail']['path'];
             $path_uri = $path.'.jpg';
             
             $result_display[$i]['thumbnail'] = $path_uri;
             
+            // On stocke les noms des persos dans un tableau à part
+            // Pour pouvoir faire le tri en front (avec tablesorter)
             $result_persos[$i] = $character['name'];
             
         }
         
-        
-        //dump($result); exit();
+        $footer_link = $result['attributionHTML'];
         
         return $this->render('MarvelCharactersBundle:Default:index.html.twig', array(
             "result" => $result_display,
-            "result_persos" => $result_persos
+            "result_persos" => $result_persos,
+            'footer_link' => $footer_link
         ));
     }
     
@@ -87,12 +91,13 @@ class DefaultController extends Controller
         // le nombre de comics où le personnage apparait / 
         // les titres des 3 premiers comics où le personnage apparait
         
+        // Récupération des données d'un personnage grâce à l'id
         $result = $this->getResultsUrl($id);
         $result_display = array();
         
         foreach($result['data']['results'] as $i => $character){
             
-            $result_display['id'] = $character['id'];
+            if (isset($result_display['id'])) $result_display['id'] = $character['id'];
             $result_display['name'] = $character['name'];
             $result_display['desc'] = $character['description'];
             
@@ -104,8 +109,14 @@ class DefaultController extends Controller
             $result_display['nb_comics'] = $character['comics']['returned'];
             
             $result_display['comics'] = array();
-            for($i=0;$i<3;$i++){
-                $result_display['comics'][$i] = $character['comics']['items'][$i]['name'];
+            
+             // Vérification qu'il y ait au moins 3 comics où le perso apparaît
+            if (isset($character['comics']['items'][0]) && isset($character['comics']['items'][2])) {
+                for($i=0;$i<3;$i++){
+                    $result_display['comics'][$i] = $character['comics']['items'][$i]['name'];
+                }
+            } else {
+                $result_display['comics'][0] = "Less than 3";
             }
             
         }

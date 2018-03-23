@@ -31,7 +31,7 @@
           </div>
       </div>
     </div>
-    <table id="myTable">
+    <table id="myTable" class="table table-hover tablesorter">
         <thead>
           <th><h3>Character name</h3></th>
           <th><h3>Image</h3></th>
@@ -39,7 +39,7 @@
         <tbody>
             {% for character in result %}
                 <tr>
-            <td> <a class="lien_animation" href="{{ path('marvel_characters_detail', {'id': character.id}) }}" >{{ character.name }} </a></td>
+                    <td style="vertical-align: middle"> <a class="lien_animation" href="{{ path('marvel_characters_detail', {'id': character.id}) }}" ><h4>{{ character.name }}</h4></a></td>
                     <td> <img src="{{ character.thumbnail }}" alt="{{ character.name }}" /></td>
                 </tr>    
             {% endfor %}    
@@ -61,6 +61,7 @@
                           <i class="icon-step-forward glyphicon glyphicon-step-forward"></i>
                       </button>
                       <select class="pagesize input-sm" title="Nombre de lignes">
+                          <option value="5">5</option>
                           <option value="10">10</option>
                           <option value="20">20</option>
                       </select>
@@ -75,5 +76,12 @@
 {% block footer %}
     
     {{ parent() }}
+            <footer>
+                
+                {{ footer_link | raw }}
+                
+            </footer>
+
+    <hr>
     
 {% endblock %}

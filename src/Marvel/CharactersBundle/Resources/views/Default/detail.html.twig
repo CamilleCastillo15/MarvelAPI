@@ -1,12 +1,12 @@
 <h3>Character's detail</h3>
-<table class="table table-hover tablesorter table-beneficiaire">
-    <tr><td>Name : </td> <td>{{ result.name }}</td></tr>
-    <tr><td>Description : </td> <td>{{ result.desc }}</td></tr>
-    <tr><td>Image : </td> <td><img src="{{ result.thumbnail }}" alt="{{ result.name }}" /></td></tr>
-    <tr><td>Number of comics apparitions : </td> <td>{{ result.nb_comics }}</td></tr>
-    <tr><td>Last 3 comics apparition : </td> <td>
+<table class="table table-hover tablesorter">
+    <tr><td><b>Name : </b></td> <td>{{ result.name }}</td></tr>
+    <tr><td><b>Description : </b></td> <td>{{ result.desc }}</td></tr>
+    <tr><td><b>Image : </b></td> <td><img src="{{ result.thumbnail }}" alt="{{ result.name }}" /></td></tr>
+    <tr><td><b>Number of comics apparitions : </td> <td>{{ result.nb_comics }}</td></tr>
+    <tr><td><b>Last 3 comics apparition : </b></td> 
     {% for comic  in result.comics %}
-        <tr><td>{{ comic }}</td> <td>
-    {% endfor %}
+        <td>{{ comic }}</td> 
+    {% endfor %}</tr>
     
 </table>
